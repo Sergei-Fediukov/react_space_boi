@@ -1,0 +1,24 @@
+@import 'src/styles/index.scss';
+
+.cursor {
+  height: 0;
+  position: relative;
+  z-index: 999;
+
+  & svg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  &_icon {
+    opacity: 0.5;
+    animation: blink;
+    animation-duration: 2s;
+    stroke: $main-white;
+  }
+}

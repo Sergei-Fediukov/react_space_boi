@@ -1,0 +1,43 @@
+@import 'src/styles/variables.scss';
+
+.example {
+    animation-name: appear;
+    animation-duration: 5000ms;
+    position: relative;
+    z-index: 0;
+
+    &_text {
+        animation-name: appear;
+        animation-delay: 1000ms;
+        animation-duration: 5000ms;
+        animation-fill-mode: forwards;
+        z-index: 1;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 150px;
+        opacity: 0;
+        white-space: nowrap;
+
+
+        @media (max-width: $medium-weight) {
+            font-size: 100px;
+        }
+
+        @media (max-width: $small-weight) {
+            font-size: 60px;
+        }
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
